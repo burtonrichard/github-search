@@ -1,0 +1,29 @@
+.container{
+    margin: 0;
+    padding: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  .profile{
+    width:250px;
+    margin-bottom: 10%;
+    padding: 2.5%;
+    background-color: #4CAF50;
+    font-size: 20px;
+    color:white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .repo{
+    width:250px;
+    margin-bottom: 10%;
+    padding: 2.5%;
+    background-color: #4CAF50;
+    font-size: 20px;
+    color:white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  

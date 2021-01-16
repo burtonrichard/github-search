@@ -1,0 +1,38 @@
+<div class="container">
+  <ul class="bar">
+    <li><h3>Input your github username</h3></li>
+  </ul>
+  <ng-progress></ng-progress>
+
+  <div class="form">
+    <form (ngSubmit)='findProfile()' #searchForm='ngForm'>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Github username" [(ngModel)] ="username" name="username" (keyup)="findProfile()">
+      </div>
+    </form>
+  </div>
+
+  <h3>Github Profile</h3>
+
+  <div class="row">
+    <div class = "avatar">
+        <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" alt="User Image">
+    </div>
+  </div>
+
+  <div class="row2">
+    <div class="col-sm-6 content-right">
+      <div class="panel"><span>Profile Name:</span>{{profile.name}}</div>
+      <div class="panel"><span>Profile Url:</span><a href="{{profile.url}}">{{profile.url}}</a></div>
+      <div class="panel"><span>Bio:</span>{{profile.bio}}</div>
+      <div class="panel"><span>Location:</span>{{profile.location}}</div>
+
+      <hr/>
+
+      <label for="Repos">Repos:{{profile.public_repos}}</label><br>
+      <label for="followers">Followers:{{profile.followers}}</label><br>
+      <label for="following">Following:{{profile.following}}</label>
+      <div class="label label-default">Account Created:{{profile.created_at}}</div>
+    </div>
+  </div>
+</div>
