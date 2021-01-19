@@ -10,6 +10,8 @@ import { Repo } from './repo';
 export class GitSearchService {
 
   private username:string;
+  private clientid = '7272c9b3e4b347c8b42b';
+  private clientsecret = '3cd16de076f27a450d12cae30a85bc5bd6b7331d';
   profile:Profile;
   repo:Repo;
   newRepo:any;
@@ -38,7 +40,7 @@ export class GitSearchService {
 
     const promise = new Promise(((resolve,reject)=>{
       // this.http.get<ApiResponse>(environment.apiUrl+this.username+environment.apiKey).toPromise().then(response=>{
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + '?access_token=' + environment.apiUrl).toPromise().then(response => {
+      this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + "?clientid=" + this.clientid + "&clientsecret" + this.clientsecret).toPromise().then(response => {
       
       this.profile.avatar_url=response.avatar_url;
       this.profile.name=response.name;
