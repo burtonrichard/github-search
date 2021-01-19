@@ -9,15 +9,13 @@ import { Repo } from './repo';
 })
 export class GitSearchService {
 
-  private username:string;
-  private clientid = '7272c9b3e4b347c8b42b';
-  private clientsecret = '3cd16de076f27a450d12cae30a85bc5bd6b7331d';
+  public username:string;
+  public clientid = '7272c9b3e4b347c8b42b';
+  public clientsecret = '3cd16de076f27a450d12cae30a85bc5bd6b7331d';
   profile:Profile;
   repo:Repo;
   newRepo:any;
   newUser:any;
-
-  private accessToken = '309c1c66e90be3db8cfe495ba801750906d87668';
 
   constructor(private http:HttpClient) {
     this.profile = new Profile('','','','','',0,0,0,new Date);
