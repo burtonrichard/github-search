@@ -23,15 +23,13 @@
   <div class="row2">
     <div class="col-sm-6 content-right">
       <div class="panel"><span>Profile Name:</span>{{profile.name}}</div>
-      <div class="panel"><span>Profile Url:</span><a href="{{profile.url}}">{{profile.url}}</a></div>
+      <div class="panel"><span>Profile Url:</span><a href="{{profile.html_url}}">{{profile.html_url}}</a></div>
       <div class="panel"><span>Bio:</span>{{profile.bio}}</div>
       <div class="panel"><span>Location:</span>{{profile.location}}</div>
-
       <hr/>
-
-      <label for="Repos">Repos:{{profile.public_repos}}</label><br>
-      <label for="followers">Followers:{{profile.followers}}</label><br>
-      <label for="following">Following:{{profile.following}}</label>
+      <div class="panel"><span>Repository:</span><a href="{{profile.html_url}}">{{profile.public_repos}}</a></div>
+      <div class="panel"><span>Followers:</span>{{profile.followers}}</div>
+      <div class="panel"><span>Following:</span>{{profile.following}}</div>
       <div class="label label-default">Account Created:{{profile.created_at}}</div>
     </div>
   </div>

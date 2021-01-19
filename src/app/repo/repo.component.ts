@@ -13,12 +13,12 @@ export class RepoComponent implements OnInit {
     username:string;
     repo:Repo;
 
-  constructor(private GitSearchService:GitSearchService) {
-        }
-    findProfile(){
-    this.GitSearchService.updateProfile(this.username);
-    this.GitSearchService.repoRequest();
-    this.repo=this.GitSearchService.repo
+  constructor(private gitsearchService:GitSearchService) { }
+  
+  findProfile(){
+    this.gitsearchService.updateProfile(this.username);
+    this.gitsearchService.repoRequest;
+    this.repo=this.gitsearchService.repo;
   }
 
   ngOnInit() {
